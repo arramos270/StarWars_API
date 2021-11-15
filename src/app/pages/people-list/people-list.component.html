@@ -1,14 +1,14 @@
 <div fxFlexFill fxLayout="row">
     <!--Lista de personas-->
-    <div fxFlex="25" style="background-color: darkcyan;">
-        <h1>Lista de personajes de Star Wars:</h1>
-        <ul>
+    <div fxFlex="20" style="background-color: darkcyan;">
+        <h1 style="margin: 10px;">Lista de personajes de Star Wars:</h1>
+        <ul style="list-style: none;">
             <app-person-item *ngFor="let person of peopleList; let i = index" [personInput]='person' (personSelectedEvent)="onPersonSelected($event)"></app-person-item>
         </ul>
     </div>
 
     <!--Detalle de la persona seleccionada-->
-    <div fxFlex="75" style="background-color: darkgoldenrod;">
-        <app-person-selected [person]="personSelected"></app-person-selected>
+    <div fxFlex="" style="background-color: darkgoldenrod;">
+        <app-person-selected style="margin:10px;" [person]="personSelected"></app-person-selected>
     </div>
 </div>
