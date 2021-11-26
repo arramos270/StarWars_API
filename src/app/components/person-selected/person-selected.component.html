@@ -1,8 +1,12 @@
 <h1>{{person?.name}}</h1>
-<p><b>Año de nacimiento:</b> {{person?.birth_year}}</p>
-<p><b>Género:</b> {{person?.gender}}</p>
-<p><b>Mundo natal:</b> {{person?.homeworld}}</p>
-<p><b>Películas:</b> {{person?.films}}</p>
-<p><b>Especie:</b> {{person?.species}}</p>
-<p><b>Vehículos:</b> {{person?.vehicles}}</p>
-<p><b>Naves estelares:</b> {{person?.starships}}</p>
+<img [src]="showImg(person?.url)" width="400px">
+
+<div *ngIf="weHaveId(person?.url)"> <!--Si el id no es nulk-->
+    <p><b>Año de nacimiento:</b> {{person?.birth_year}}</p>
+    <p><b>Género:</b> {{person?.gender}}</p>
+    <p><b>Mundo natal:</b> {{person?.homeworld}}</p>
+    <p><b>Películas:</b> {{person?.films}}</p>
+    <p><b>Especie:</b> {{person?.species}}</p>
+    <p><b>Vehículos:</b> {{person?.vehicles}}</p>
+    <p><b>Naves estelares:</b> {{person?.starships}}</p>
+</div>

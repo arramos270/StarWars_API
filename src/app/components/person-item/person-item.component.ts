@@ -15,9 +15,16 @@ export class PersonItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getPersonId(url: string){
-    let id = url.split("/", 6).pop();
+  getPersonId(url: string | undefined){
+    let id=null;
+    if(url!=undefined){
+      id = url.split("/", 6).pop();
+    }
     return id;
+  }
+
+  showImage(url: string | undefined){
+    return `https://starwars-visualguide.com/assets/img/characters/${this.getPersonId(url)}.jpg`;
   }
 
   onPersonClick(){

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Person } from 'src/app/models/interfaces/people.interface';
 import { PeopleService } from 'src/app/services/people.service';
+import { PersonItemComponent } from '../person-item/person-item.component';
 
 @Component({
   selector: 'app-person-details',
