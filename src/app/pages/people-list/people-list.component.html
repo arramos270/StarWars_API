@@ -2,8 +2,19 @@
     <!--Lista de personas-->
     <div fxFlex="20" style="background-color: darkcyan;">
         <h1 style="margin: 10px;">Lista de personajes de Star Wars:</h1>
+
+        <mat-form-field-appearance="fill">
+            <mat-label>Género</mat-label>
+        <mat-select [formControl]="genderFormControl">
+            <mat-option value="male">Masculino</mat-option>
+            <mat-option value="female">Femenino</mat-option>
+            <mat-option value="n/a">Otro</mat-option>
+        </mat-select>
+        </mat-form-field-appearance>
+        <button mat-raised-button color="primary" (click)=doFilter()>Filtrar</button>
+
         <ul style="list-style: none;">
-            <app-person-item *ngFor="let person of peopleList; let i = index" [personInput]='person' (personSelectedEvent)="onPersonSelected($event)"></app-person-item>
+            <app-person-item *ngFor="let person of listaPersonajesFiltrados; let i = index" [personInput]='person' (personSelectedEvent)="onPersonSelected($event)"></app-person-item>
         </ul>
     </div>
 

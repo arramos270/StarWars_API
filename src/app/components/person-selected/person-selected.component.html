@@ -1,7 +1,7 @@
 <h1>{{person?.name}}</h1>
 <img [src]="showImg(person?.url)" width="400px">
 
-<div *ngIf="weHaveId(person?.url)"> <!--Si el id no es nulk-->
+<div *ngIf="weHaveId(person?.url)"> <!--Si el id no es null-->
     <p><b>Año de nacimiento:</b> {{person?.birth_year}}</p>
     <p><b>Género:</b> {{person?.gender}}</p>
     <p><b>Mundo natal:</b> {{person?.homeworld}}</p>
